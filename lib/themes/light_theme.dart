@@ -19,11 +19,12 @@ final lightTheme = ThemeData(
     ),
     displaySmall: TextStyle(
       fontSize: 20.0,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w900,
       color: Colors.black,
     ),
     bodyLarge: TextStyle(
       fontSize: 16.0,
+      fontWeight: FontWeight.bold,
       color: Colors.black,
     ),
     bodyMedium: TextStyle(
