@@ -28,9 +28,8 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Center(
-          child: ReusableButton(
-            buttonText: "Enter your e-mail address",
-            onPressed: () {},
+          child: CustomTextField(
+            hintText: 'E-mail',
           ),
         ),
       ),
