@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 2), () => Get.off(const LoginPage()));
+    Timer(const Duration(seconds: 2), () => Get.off(LoginPage()));
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SizedBox(
