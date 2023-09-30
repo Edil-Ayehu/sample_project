@@ -9,8 +9,9 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 2), () => Get.off(LoginPage()));
-    return const Scaffold(
+    Timer(const Duration(seconds: 2), () => Get.off(const LoginPage()));
+    double h = MediaQuery.of(context).size.height;
+    return Scaffold(
       body: SizedBox(
         width: double.infinity,
         child: Column(
@@ -18,11 +19,11 @@ class SplashScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image(
-              image: AssetImage('images/logo.png'),
-              height: 90,
+              image: const AssetImage('images/logo.png'),
+              height: h * 0.15,
             ),
-            SizedBox(height: 6),
-            DynamicWidthContainer(
+            const SizedBox(height: 6),
+            const DynamicWidthContainer(
               text: 'For Rider',
               textColor: Colors.white,
               bgColor: Colors.orangeAccent,
