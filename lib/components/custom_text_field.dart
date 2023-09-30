@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 
 class CustomTextField extends StatefulWidget {
   final String hintText;
+  final ValueChanged<String>? onChanged;
+  final TextInputType keyboardType;
 
-  const CustomTextField({super.key, required this.hintText});
+  const CustomTextField({
+    super.key,
+    required this.hintText,
+    required this.onChanged,
+    required this.keyboardType,
+  });
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -35,13 +42,19 @@ class _CustomTextFieldState extends State<CustomTextField> {
     setState(() {
       _showClearIcon = false;
     });
+
+    if (widget.onChanged != null) {
+      widget.onChanged!('');
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       controller: _controller,
+      onChanged: widget.onChanged,
       autofocus: true,
+      keyboardType: widget.keyboardType,
       cursorColor: Colors.orange,
       style: const TextStyle(
         color: Colors.black,

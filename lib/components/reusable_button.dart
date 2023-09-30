@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ReusableButton extends StatelessWidget {
-  String buttonText;
+  final String buttonText;
   final Function()? onPressed;
 
-  ReusableButton({
+  const ReusableButton({
     super.key,
     required this.buttonText,
     required this.onPressed,
